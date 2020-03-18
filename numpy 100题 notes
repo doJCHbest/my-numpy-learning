@@ -64,7 +64,7 @@
 
    np.std(array, axis = 1)——计算每一行的标准差
 
-​       array = (array - np.mean(array)) / (np.std(array))——计算矩阵的标准差 
+   array = (array - np.mean(array)) / (np.std(array))——计算矩阵的标准差 
 
 3. np.dot(x, y) / x @ y ——矩阵相乘的两种形式
 
