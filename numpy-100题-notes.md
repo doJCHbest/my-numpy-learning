@@ -91,4 +91,47 @@
 11. np.intersect1d(array1, array2)——返回两个矩阵中的相同的值组成的矩阵(输入矩阵的格式不需要一致，可以任意)
 
 ---
+#### 2020/3/18 31 - 40题
 
+1. np.sqrt(-1)——报错
+
+   np.emath.sqrt(-1)——emath自动域数学函数，扩展到复数，该式子结果是1j
+   
+2. np.datetime('today', 'D')——获取今天的日期，python日期接口
+
+   np.arange('2020-02', '2020-03', dtype = 'datetime64[D]')——获取2020年2月的所有日期
+   
+3. np.add(array1, array2, out = array1)——将矩阵相加的结果赋给array1
+
+   np.divide(array1, 2, out = array1)——矩阵中每个元素都除以2
+
+   np.negative(array1, out = array1)——矩阵所有元素乘-1
+   
+   np.multiply(array1, array2)——矩阵对应元素相乘，输出与相乘矩阵的大小一致
+  
+   ps: 灵活运用可以达到避免复制的目的
+  
+4. 提取矩阵中所有元素的整数部分的5种方法
+
+   z = np.random.uniform(0, 10, (10, 10))
+
+   print(z - z % 1)——数学方法
+   
+   print(np.floor(z))——np.floor()返回不大于输入参数的最大整数
+   
+   print(np.ceil(z) - 1)——np.ceil()返回大于输入参数的最小整数
+   
+   print(z.astype(int))——np.astype()数据类型转换（将浮点数转换成整数时，小数部分会被截断）
+   
+   print(np.trunc(z))——np.trunc()返回输入参数的整数部分
+   
+5. np.around(array1, decimals=0, out=None)——返回输出参数四舍五入之后的值
+                                            decimals参数的值对应四舍五入的小数位数，默认为0
+                                            
+6. yield——可记录数据的迭代对象，可以记录上一次函数运行的值，并且在下一个迭代中使用，减少内存消耗
+
+7. array.sort(cmp = None)——比较的标准可以自己写函数来规定，默认是从小到大排列
+
+8.
+
+ 
