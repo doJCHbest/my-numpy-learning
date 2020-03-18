@@ -1,0 +1,94 @@
+### numpy 笔记
+
+---
+
+#### 2020/3/11 0 - 10题
+
+1. np.itemsize——每一个元素的类型所占的位数
+
+2. np.show_config——查看numpy的版本和配置
+
+3. np.info(np.某个函数)——在命令行下查看numpy关于某个函数的文档
+
+4. np.arange(n, m)——创建一个值从 n 到 m - 1 的数组
+
+   np.arange(n)——创建一个值从 0 到 n - 1 的数组
+
+   np.arange(n).reshape(x, y)——创建一个值从 0 到 n - 1 的 x * y 的矩阵
+
+5. a = a[ :: -1]——将一个数组反转（第一个元素变成最后一个，以此类推）
+
+6. a = a[ : -n]——从a[0]取到数组倒数第 n + 1 个元素
+
+7. np.nonzero(a)——返回数组a中非0的索引（非零元素在数组中的位置）
+
+---
+
+#### 2020/3/12 11 - 20题
+
+1. np.random.random((n, m, z))——随机生成一个 n * m * z 的矩阵
+
+   np.random.randint(n, m, z)——随机生成[n, m]区间内的z个数形成矩阵
+
+   np.random.uniform...(无符号数)
+
+2. a.mean() / a.max() / a.min()——返回矩阵a的平均值/最大值/最小值
+
+3. np.eye(n)——生成一个 n * n 的对角矩阵
+
+4. a[n : m, x : y] = ？——对矩阵a的第 n 至 m 列，每列的第 x 至 y个元素赋值
+
+5. np.pad(array, pad_width = n, mode='constant', constant_values = m)——该函数作用相当于把一个矩阵当作一个长方形，长宽都增加 2n 。若原矩阵为 a * b, 现在矩阵为 (a + 2n) * (b + 2n)，多的部分的填充值为 m
+
+6. math.isnan(np.nan)——安全检测nan值(ps：nan(not a number)用于处理计算中错误的情况，比如：0 / 0 )
+
+7. np.diag(array, k)——当矩阵array为一维时，返回一个对角线依次为该数组元素，其他元素均为0的矩阵；当矩阵为二维时，返回其对角线元素，当 k > 0 时，返回矩阵对角线右上方的平行线上的元素；当 k < 0 时，返回矩阵对角线左下方的平行线上的元素。
+
+8. array[start: end: step]——选取矩阵array中的部分元素，从start行到end行，步长为step(start和end可以省略)
+
+9. np.unravel_index(x, array.shape)——返回第x个元素在矩阵array中的索引
+
+---
+
+#### 2020/3/15 20 - 30题
+
+1. np.tile(array, n)——将矩阵array沿x轴复制“到”n倍(单个向量变长)
+
+   np.tile(array, (n, m))——将矩阵array沿x轴复制“到”m倍(单个向量变长)，沿y轴复制“到”n倍(向量数量增加)
+
+   ps: tile函数后一个参数的变化引起矩阵维数的变化
+
+2. np.std(array)——计算全局标准差
+
+   np.std(array, axis = 0)——计算每一列的标准差
+
+   np.std(array, axis = 1)——计算每一行的标准差
+
+​       array = (array - np.mean(array)) / (np.std(array))——计算矩阵的标准差 
+
+3. np.dot(x, y) / x @ y ——矩阵相乘的两种形式
+
+4. array[(array > 3) & (array <= 5)]——对矩阵中大于3且小于等于5的元素进行操作
+
+5. np.sum(array, axis = 0)——按列求和
+
+   np.sum(array, axis = 1)——按行求和
+
+6. np.mat()——创建矩阵
+
+7. / ——除号
+
+   //——整除
+
+8. np.abs(array)——矩阵中所有元素取绝对值
+
+9. np.ceil(array)——返回大于等于每个元素的最小整数
+
+10. np.copysign(array1, array2)——将array2中的元素符号依此赋给array1中的每个元素(两矩阵的shape应该相同)
+
+    np.copysign(array1, num1)——将num1的符号赋给array1中的每个元素
+
+11. np.intersect1d(array1, array2)——返回两个矩阵中的相同的值组成的矩阵(输入矩阵的格式不需要一致，可以任意)
+
+---
+
