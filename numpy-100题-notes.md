@@ -132,6 +132,11 @@
 
 7. array.sort(cmp = None)——比较的标准可以自己写函数来规定，默认是从小到大排列
 
-8.
+8. np.linspace(start, stop, num, endpoint=True, retstep=False, dtype=None)——endpoint(True,包括stop;False,不包括stop), num(生成的样本数),
+
+   retstep(True, step = (stop - start) / (num - 1);False, step随机)
+   
+---
+                                                                            
 
  
