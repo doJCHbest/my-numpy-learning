@@ -173,4 +173,7 @@
    
 8. [np.set_printoptions](https://docs.scipy.org/doc/numpy/reference/generated/numpy.set_printoptions.html)(threshold = 100)——设置矩阵中元素过多时，最多可以显示100个元素，其他部分用省略号表示   
 
+9. n = [np.argmin](https://numpy.org/devdocs/reference/generated/numpy.argmin.html)(array)——返回array所有元素中的最小值的索引（第n个）
+   n = np.argmin(array, axis = 0 / 1)——返回每一行/每一列的最小值的索引（在对应行/列的第n个）
 
+---
