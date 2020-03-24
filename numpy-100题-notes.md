@@ -2,7 +2,7 @@
 
 ---
 
-#### 2020/3/11 0 - 10题
+#### 2020/3/11 1 - 10题
 
 1. np.itemsize——每一个元素的类型所占的位数
 
@@ -167,6 +167,10 @@
 
 6. xx, yy = [np.meshgrid](https://docs.scipy.org/doc/numpy/reference/generated/numpy.meshgrid.html)(x, y)——将x作为xx行向量，将y作为yy的列向量，生成的xx和yy的shape相同，注意：np.meshgrid(x, y)≠np.meshgrid(y, x)
 
-7. 
+7. np.innfo(np.int64)——显示机器能处理的int64型的范围
+
+   np.finfo(np.float64)——显示机器能处理的float64型的范围
+   
+8. [np.set_printoptions](https://docs.scipy.org/doc/numpy/reference/generated/numpy.set_printoptions.html)(threshold = 100)——设置矩阵中元素过多时，最多可以显示100个元素，其他部分用省略号表示   
 
 
