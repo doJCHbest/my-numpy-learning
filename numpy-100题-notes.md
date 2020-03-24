@@ -1,4 +1,4 @@
-### numpy笔记
+### numpy入门100题-前50题
 
 ---
 
@@ -50,7 +50,7 @@
 
 ---
 
-#### 2020/3/15 20 - 30题
+#### 2020/3/15 21 - 30题
 
 1. np.tile(array, n)——将矩阵array沿x轴复制“到”n倍(单个向量变长)
 
@@ -91,6 +91,7 @@
 11. np.intersect1d(array1, array2)——返回两个矩阵中的相同的值组成的矩阵(输入矩阵的格式不需要一致，可以任意)
 
 ---
+
 #### 2020/3/18 31 - 40题
 
 1. np.sqrt(-1)——报错
@@ -137,6 +138,33 @@
    retstep(True, step = (stop - start) / (num - 1);False, step随机)
    
 ---
-                                                                            
 
- 
+#### 2020/3/24 41 - 50题（偷懒多天/(ㄒoㄒ)/~）
+
+1. 判断两个array是否相等的方法
+
+   np.allclose(array1, array2)——比较两个array是否每个元素都相等(在1e-05范围内)
+
+   np.array_equal(array1, array2)——比较两个array是否相等
+   
+2. array.flags.writeable = False——锁定array，使得array不可变(只读),访问或者修改array内元素的行为都不被允许,比如：array[0] = 1 (×)
+
+3. np.column_stack(array1, array2)——将两个一维数组作为列组成一个新的二维矩阵  
+   eg: 
+   >>> a = np.array((1,2,3))
+   >>> b = np.array((2,3,4))
+   >>> np.column_stack((a,b))
+   array([[1, 2],
+          [2, 3],
+          [3, 4]])
+
+4. np.arctan()和np.arctan2()——二者都是反正切函数
+   区别：首先，参数的个数不同——tan 为单个参数，atan2为两个参数；
+         其次，对于两点形成的直线，两点分别是 point(x1,y1) 和 point(x2,y2),其斜率对应角度的计算方法可以是：
+         angle = np.arctan( (y2-y1)/(x2-x1) ) 或 angle = np.arctan2( y2-y1, x2-x1 )，当 x2 - x1 = 0 时，artan需要提前判断，否则会导致错误，          但是artan2可以正常使用。
+         
+5. array1[array1.argmax()]——索引array1中最大值的index
+
+6. xx, yy = [np.meshgride](https://docs.scipy.org/doc/numpy/reference/generated/numpy.meshgrid.html)(x, y)——将x作为xx行向量，将y作为yy的列向量，生成的xx和yy的shape相同，注意：np.meshgride(x, y)≠np.meshgride(y, x)
+
+
