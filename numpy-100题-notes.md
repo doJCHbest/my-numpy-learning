@@ -165,6 +165,8 @@
          
 5. array1[array1.argmax()]——索引array1中最大值的index
 
-6. xx, yy = [np.meshgride](https://docs.scipy.org/doc/numpy/reference/generated/numpy.meshgrid.html)(x, y)——将x作为xx行向量，将y作为yy的列向量，生成的xx和yy的shape相同，注意：np.meshgride(x, y)≠np.meshgride(y, x)
+6. xx, yy = [np.meshgrid](https://docs.scipy.org/doc/numpy/reference/generated/numpy.meshgrid.html)(x, y)——将x作为xx行向量，将y作为yy的列向量，生成的xx和yy的shape相同，注意：np.meshgrid(x, y)≠np.meshgrid(y, x)
+
+7. 
 
 
