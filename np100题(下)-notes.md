@@ -24,6 +24,10 @@
 
 8. [np.put](https://docs.scipy.org/doc/numpy/reference/generated/numpy.put.html)()——常用参数有：目标数组array，目标索引，需要放入的元素的矩阵
 
-9. 
+9. python中keepdim的意义：使得矩阵保持二维的特性(例如：[3, 7]和[[3, 7]])
        
-   
+10. [np.subtract](https://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html)()——矩阵/数字的减法(取决于输入)
+
+11. array[array[:, 1].argsort()]——对array按照第二列进行排序，即保证第二列的元素是从小到大排序的
+
+12. [np.any](https://docs.scipy.org/doc/numpy/reference/generated/numpy.any.html)()——对给定轴的元素值是否全为0进行判断
