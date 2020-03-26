@@ -20,6 +20,10 @@
    
    2)[np.ndindex()](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndindex.html)——需要输入矩阵的shape
 
+7. np.random.choice(array, size, p)——从array中随机抽取size个数字，可设定抽取概率为集合p
 
+8. [np.put](https://docs.scipy.org/doc/numpy/reference/generated/numpy.put.html)()——常用参数有：目标数组array，目标索引，需要放入的元素的矩阵
+
+9. 
        
    
