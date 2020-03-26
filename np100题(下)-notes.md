@@ -12,4 +12,14 @@
 
 4. array.[astype](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.astype.html)('float64')——类型的强制转换(不安全的转换)，需要注意的是，当浮点数转换成整数时，会丢失小数点后的部分，损失部分精度
 
-5. 
+5. [np.genfromtxt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.genfromtxt.html#numpy.genfromtxt)()——常用的参数有：输入文件的路径path，你期望的文件的dtype，分隔符delimiter
+
+6. 如何输出矩阵的坐标（以及值）
+
+   1)[np.ndenumerate()](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndenumerate.html)——需要输入矩阵
+   
+   2)[np.ndindex()](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndindex.html)——需要输入矩阵的shape
+
+
+       
+   
