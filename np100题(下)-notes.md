@@ -38,4 +38,18 @@
 
 1. [np.flat](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.flat.html)[np.abs(array - num).argmin()]——np.flat[]是一维矩阵的迭代器，比如给出样例中，找出数组array中与数字num最接近的数字
 
-2. np.nditer([array1, array2, None])——np.nditer作为多维数组的迭代器，这里贴出一个[数组迭代](https://docs.scipy.org/doc/numpy/reference/arrays.nditer.html#arrays-nditer)以供参考
+2. np.nditer()——np.nditer作为多维数组的迭代器，这里贴出一个[数组迭代](https://docs.scipy.org/doc/numpy/reference/arrays.nditer.html#arrays-nditer)以供参考，最基本的功能是访问多维数组，直接输入一个矩阵
+
+3. python面向对象中self和cls的简单区别：self表示一个具体的实例本身，而cls表示的是一个类本身；
+
+4. _new_ / _init_ 的联系——通常来说：新式类开始实例化时，__new__()方法会返回cls（cls指代当前类）的实例，然后该类的__init__()方法作为构造方法会接收这个实例（即self）作为自己的第一个参数，然后依次传入__new__()方法中接收的位置参数和命名参数。注意！如果__new__()没有返回cls（即当前类）的实例，那么当前类的__init__()方法是不会被调用的。如果__new__()返回其他类（新式类或经典类均可）的实例，那么只会调用被返回的那个类的构造方法。所以在新式类中__new__()才是真正的实例化方法，为类提供外壳制造出实例框架，然后调用该框架内的构造方法__init__()使其丰满。 如果以建房子做比喻，__new__()方法负责开发地皮，打下地基，并将原料存放在工地。而__init__()方法负责从工地取材料建造出地皮开发招标书中规定的大楼，__init__()负责大楼的细节设计，建造，装修使其可交付给客户。
+
+5. [np.bincout](https://docs.scipy.org/doc/numpy/reference/generated/numpy.bincount.html)()——这个函数是将输入的一维数组中的数字出现的次数进行统计，并且返回一个键为数字，值为数字出现次数的数组，类似于数据结构里的桶排
+
+  eg: array = [1, 2, 3, 4, 5]
+  
+      array1 = [0, 0, 1, 1, 2]
+      
+      result = np.bincount(array1, array)
+      
+      解释：array按照array1的比重来分别求和，权重不同分别求和，返回的是[3, 7, 5]，例如array1[0] = 0, array1[1] = 0,所以array[0] + array[1] = 3
