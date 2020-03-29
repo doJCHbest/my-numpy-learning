@@ -31,3 +31,11 @@
 11. array[array[:, 1].argsort()]——对array按照第二列进行排序，即保证第二列的元素是从小到大排序的
 
 12. [np.any](https://docs.scipy.org/doc/numpy/reference/generated/numpy.any.html)()——对给定轴的元素值是否全为0进行判断
+
+---
+
+#### 2020/3/29 61 - 70 题
+
+1. [np.flat](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.flat.html)[np.abs(array - num).argmin()]——np.flat[]是一维矩阵的迭代器，比如给出样例中，找出数组array中与数字num最接近的数字
+
+2. np.nditer([array1, array2, None])——np.nditer作为多维数组的迭代器，这里贴出一个[数组迭代](https://docs.scipy.org/doc/numpy/reference/arrays.nditer.html#arrays-nditer)以供参考
