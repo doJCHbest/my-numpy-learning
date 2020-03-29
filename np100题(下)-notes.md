@@ -46,10 +46,14 @@
 
 5. [np.bincout](https://docs.scipy.org/doc/numpy/reference/generated/numpy.bincount.html)()——这个函数是将输入的一维数组中的数字出现的次数进行统计，并且返回一个键为数字，值为数字出现次数的数组，类似于数据结构里的桶排
 
-  eg: array = [1, 2, 3, 4, 5]
+   eg: array = [1, 2, 3, 4, 5]
   
       array1 = [0, 0, 1, 1, 2]
       
       result = np.bincount(array1, array)
       
       解释：array按照array1的比重来分别求和，权重不同分别求和，返回的是[3, 7, 5]，例如array1[0] = 0, array1[1] = 0,所以array[0] + array[1] = 3
+
+6. 多维数组求最后两个轴上的元素和的一种基本方法——array.sum(axis = (-1, -2))
+
+7. 
