@@ -56,4 +56,34 @@
 
 6. 多维数组求最后两个轴上的元素和的一种基本方法——array.sum(axis = (-1, -2))
 
-7. 
+7. 如何获取点积的对角矩阵
+   
+   np.diag(np.dot(A, B))——慢
+   
+   np.sum(A * B.T, axis = 1)——快
+   
+   np.einsum("ij, ji -> i", A, B)——最快
+   
+   附上[np.einsum()文档](https://docs.scipy.org/doc/numpy/reference/generated/numpy.einsum.html)，稍微解释一下，下列情况均相对于两个矩阵：
+   
+   np.einsum('ij', A)返回矩阵A本身
+   
+   np.einsum('ji', A)返回矩阵A的转置（等价于：A.T）
+   
+   np.einsum('ii', A)返回矩阵A对角线上元素的和（等价于：np.trace(A)）
+   
+   np.einsum('ij->', A)返回矩阵A所有元素的和（等价于：np.sum(A)）
+   
+   np.einsum('ij->j', A)返回矩阵A列向量的和（等价于：np.sum(A, axis=0)）
+   
+   np.einsum('ij->i', A)返回矩阵A行向量的和（等价于：np.sum(A, axis=1)）
+   
+   np.einsum('ij, ij->ij', A, B)是矩阵A和矩阵B的点乘（等价于：A*B）
+   
+   np.einsum('ij, jk', A, B)是矩阵A乘以矩阵B—— AB（等价于：np.dot(A, B)）
+
+   翻译一下速度最快的例子就是A乘以B的转置，再求出结果矩阵的行向量的和
+   
+---
+   
+   
