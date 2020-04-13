@@ -85,5 +85,8 @@
    翻译一下速度最快的例子就是A乘以B的转置，再求出结果矩阵的行向量的和
    
 ---
-   
+#### 2020/4/13 机器学习代码的一点随笔
+
+1.[np.asarray](https://docs.scipy.org/doc/numpy/reference/generated/numpy.asarray.html)(array1, dtype)——可以将array中元素进行类型转换
+
    
